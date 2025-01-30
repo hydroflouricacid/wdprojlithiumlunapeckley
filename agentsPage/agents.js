@@ -1,6 +1,6 @@
 function changeContent(evt, agentName) {
   // Declare all variables
-  var tabcontent, tablinks;
+  var tabcontent, tablinks, activetab;
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("agentDescription");
@@ -9,7 +9,7 @@ function changeContent(evt, agentName) {
     console.log("AUGUUGAUIHIDS");
   }
 
-  var activetab = document.getElementById(agentName.toString());
-  activetab.style.display = "none";
+  activetab = document.getElementById(agentName.toString());
+  activetab[0].style.display = "block";
   console.log("AISAHIUDABUISD");
 } 
