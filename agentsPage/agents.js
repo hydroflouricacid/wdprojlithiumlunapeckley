@@ -9,7 +9,7 @@ function changeContent(evt, agentName) {
     console.log("AUGUUGAUIHIDS");
   }
 
-  var activetab = document.getElementById(agentName);
+  var activetab = document.getElementById(agentName.toString());
   activetab.style.display = "none";
   console.log("AISAHIUDABUISD");
 } 
