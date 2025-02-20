@@ -1,0 +1,195 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Smooth Fade-in Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  /* Header */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 15, 15, 0.9);
+    padding: 20px;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  header a.logo img {
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  header a.logo:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Sections */
+  section {
+    padding: 80px 20px;
+    width: 100vw;
+    max-width: 100%;
+  }
+  
+  .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Learn Section */
+  .learn-section {
+    background: linear-gradient(120deg, #111, #0d0d0d);
+  }
+  
+  .learn-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .learn-section p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+    line-height: 1.8;
+  }
+  
+  /* Origin Section */
+  .origin-section {
+    background: linear-gradient(120deg, #1a1a1a, #111);
+  }
+  
+  .origin-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Feature Section */
+  .feature-section {
+    background-color: #0d0d0d;
+  }
+  
+  .feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+  }
+  
+  .feature-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 70, 85, 0.5);
+  }
+  
+  /* Team Section */
+  .team-section {
+    background: linear-gradient(120deg, #0a0a0a, #111);
+    padding-bottom: 100px;
+  }
+  
+  .team-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px; /* Added more spacing from the title */
+  }
+  
+  .team {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  /* Team Member Cards */
+  .team-member {
+    background-color: #1a1a1a;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .team-member:hover {
+    box-shadow: 0 0 20px rgba(255, 70, 85, 0.8); /* Glow effect only on hover */
+  }
+  
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    box-shadow: none; /* Removed glow on hover for images */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .team-member h4 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #bbbbbb;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    background-color: #000000;
+    color: #888888;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .feature-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
