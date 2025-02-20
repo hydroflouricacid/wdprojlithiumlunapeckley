@@ -1,0 +1,243 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    overflow-x: hidden;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 15, 15, 0.9);
+    padding: 20px;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  header a.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header a.logo img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  header a.logo:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Burger Menu Button */
+  .menu-toggle {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1002;
+  }
+  
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Full-Screen Mobile Menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.98);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease-in-out;
+    z-index: 1003;
+  }
+  
+  .mobile-menu.active {
+    right: 0;
+  }
+  
+  /* Darken Background When Menu is Open */
+  body.menu-active {
+    overflow: hidden;
+    width: 100vw;
+  }
+  
+  /* Mobile Menu Navigation */
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .mobile-menu a {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .mobile-menu a:hover {
+    color: #ff4655;
+  }
+  
+  /* Close Button */
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .close-menu:hover {
+    transform: rotate(90deg);
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #0d0d0d;
+  }
+  
+  .contact-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+    margin-bottom: 30px;
+  }
+  
+  /* Contact Form */
+  #contact-form {
+    max-width: 500px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #ff4655;
+    box-shadow: 0 0 8px rgba(255, 70, 85, 0.5);
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4655;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff7a85;
+  }
+  
+  /* Form Status Message */
+  #form-status {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #ff4655;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    background-color: #000000;
+    color: #888888;
+    text-align: center;
+    font-size: 14px;
+    width: 100vw;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 80px 15px;
+    }
+  
+    #contact-form {
+      padding: 20px;
+    }
+  
+    .contact-section h2 {
+      font-size: 2.5rem;
+    }
+  }
