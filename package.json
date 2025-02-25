@@ -1,0 +1,24 @@
+{
+  "name": "wdprojlithiumlunapeckley-2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/hydroflouricacid/wdprojlithiumlunapeckley-2#readme",
+  "bugs": {
+    "url": "https://github.com/hydroflouricacid/wdprojlithiumlunapeckley-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydroflouricacid/wdprojlithiumlunapeckley-2.git"
+  },
+  "license": "MIT",
+  "author": "Araw Peckley, Luis Luna",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "hbs": "^4.2.0"
+  }
+}
