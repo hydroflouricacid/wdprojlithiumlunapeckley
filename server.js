@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define a route
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Hello, World!', message: 'Welcome to Node.js with Handlebars!' });
+  res.render('index');
 });
 
 // Handle form submission
