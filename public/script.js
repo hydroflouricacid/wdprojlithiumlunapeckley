@@ -17,3 +17,24 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(element);
       });
     });
+
+    document.getElementById('flick-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const formObject = Object.fromEntries(formData.entries());
+    
+      const res = await fetch('/flick', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formObject)
+      });
+    
+      const status = document.getElementById('flick-status');
+      if (res.ok) {
+        status.textContent = 'Score submitted!';
+        form.reset();
+      } else {
+        status.textContent = 'Failed to submit score.';
+      }
+    });    

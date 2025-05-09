@@ -31,3 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 1500);
     });
   });
+
+  document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const formObject = Object.fromEntries(formData.entries());
+  
+    const res = await fetch('/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formObject)
+    });
+  
+    const status = document.getElementById('form-status');
+    if (res.ok) {
+      status.textContent = 'Message sent successfully!';
+      form.reset();
+    } else {
+      status.textContent = 'Failed to send message.';
+    }
+  });
